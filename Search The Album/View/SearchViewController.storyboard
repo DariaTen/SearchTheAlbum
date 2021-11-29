@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IQ2-qs-W0L">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="U1Y-mQ-CU3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXA-iT-oXk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="IQ2-qs-W0L" customClass="SearchViewController" customModule="Search_The_Album" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JUf-fR-oWX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search the Album" translatesAutoresizingMaskIntoConstraints="NO" id="GbF-JW-D9f">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q95-6U-yvp">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MvL-r0-UFP">
+                                    <size key="itemSize" width="110" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="vUw-Jh-5Fn" customClass="AlbumCell" customModule="Search_The_Album" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dh7-W4-lMg" userLabel="Album Image View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="Aq9-Eg-BXU"/>
+                                                        <constraint firstAttribute="height" constant="110" id="m1W-nD-OlN"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleeping with Ghosts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxv-O9-jsy">
+                                                    <rect key="frame" x="0.0" y="122" width="110" height="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="13" id="55t-db-t9Q"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placebo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qj4-Zw-Iia">
+                                                    <rect key="frame" x="0.0" y="135" width="110" height="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="13" id="MOe-F3-89I"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="qj4-Zw-Iia" firstAttribute="leading" secondItem="vUw-Jh-5Fn" secondAttribute="leading" id="2hO-0Z-Uxy"/>
+                                            <constraint firstAttribute="trailing" secondItem="qj4-Zw-Iia" secondAttribute="trailing" id="3En-D3-d6y"/>
+                                            <constraint firstItem="zxv-O9-jsy" firstAttribute="leading" secondItem="vUw-Jh-5Fn" secondAttribute="leading" id="5jI-18-BpK"/>
+                                            <constraint firstItem="qj4-Zw-Iia" firstAttribute="top" secondItem="zxv-O9-jsy" secondAttribute="bottom" id="NRU-XQ-TMC"/>
+                                            <constraint firstItem="Dh7-W4-lMg" firstAttribute="top" secondItem="vUw-Jh-5Fn" secondAttribute="top" id="QQ0-xI-Cm0"/>
+                                            <constraint firstItem="Dh7-W4-lMg" firstAttribute="centerX" secondItem="vUw-Jh-5Fn" secondAttribute="centerX" id="S1Y-S9-gOy"/>
+                                            <constraint firstAttribute="trailing" secondItem="zxv-O9-jsy" secondAttribute="trailing" id="ccZ-kT-7jL"/>
+                                            <constraint firstAttribute="bottom" secondItem="qj4-Zw-Iia" secondAttribute="bottom" constant="2" id="feQ-hM-s8a"/>
+                                            <constraint firstItem="qj4-Zw-Iia" firstAttribute="top" secondItem="zxv-O9-jsy" secondAttribute="bottom" id="qqB-kL-l0W"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="albumImageView" destination="Dh7-W4-lMg" id="JVu-hP-QMq"/>
+                                            <outlet property="albumTitleLabel" destination="zxv-O9-jsy" id="dZN-vs-Wuq"/>
+                                            <outlet property="artistTitleLabel" destination="qj4-Zw-Iia" id="PO8-RD-sIi"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fVO-tE-FKr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GbF-JW-D9f" firstAttribute="leading" secondItem="fVO-tE-FKr" secondAttribute="leading" id="6jj-rL-qw6"/>
+                            <constraint firstItem="Q95-6U-yvp" firstAttribute="bottom" secondItem="fVO-tE-FKr" secondAttribute="bottom" id="7HF-IW-Nhx"/>
+                            <constraint firstItem="GbF-JW-D9f" firstAttribute="top" secondItem="fVO-tE-FKr" secondAttribute="top" id="ADH-Qp-SUt"/>
+                            <constraint firstItem="Q95-6U-yvp" firstAttribute="trailing" secondItem="fVO-tE-FKr" secondAttribute="trailing" id="WhE-7G-zFs"/>
+                            <constraint firstItem="Q95-6U-yvp" firstAttribute="top" secondItem="GbF-JW-D9f" secondAttribute="bottom" id="nML-45-hyf"/>
+                            <constraint firstItem="GbF-JW-D9f" firstAttribute="trailing" secondItem="fVO-tE-FKr" secondAttribute="trailing" id="zGz-ZU-kPW"/>
+                            <constraint firstItem="Q95-6U-yvp" firstAttribute="leading" secondItem="fVO-tE-FKr" secondAttribute="leading" id="zHg-Da-V3I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rz2-dg-xyv"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Q95-6U-yvp" id="wXq-CT-h3J"/>
+                        <outlet property="searchBar" destination="GbF-JW-D9f" id="308-QS-i9L"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2143.4782608695655" y="267.85714285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
