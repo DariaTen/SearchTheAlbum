@@ -24,4 +24,14 @@ final class AlbumInfoPresenterTests:XCTestCase {
 		presenter = nil
 		super.tearDown()
 	}
+
+	func testWhenSearchTrackCalledThanNetworkingCalled() {
+		// Arrange
+		// Act
+		let album = Album(artistName: "", collectionName: "", collectionId: 0, artworkUrl100: "", releaseDate: "", primaryGenreName: "")
+		presenter.loadListOfTracks(for: album)
+
+		// Assert
+		XCTAssertEqual(networking.getTrackCount, 1)
+	}
 }
